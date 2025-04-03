@@ -75,6 +75,19 @@ namespace Football
             else if (page == 15)
             {
                 page = 3;
+
+            }
+            else if (page == 3)
+            {
+                page = 1;
+            }
+            else if (page == 4)
+            {
+                page = 1;
+            }
+            else if (page == 2)
+            {
+                page = 1;
             }
             DisplayPage();
         }
