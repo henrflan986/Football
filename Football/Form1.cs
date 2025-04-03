@@ -103,6 +103,7 @@ namespace Football
                     outputLabel.Text = "Start drive";
                     option2Output.Text = "Run";
                     option3Output.Text = "Pass";
+                    option4Output.Text = "";
                    sPlayer = new SoundPlayer(Properties.Resources.startUpSound);
                    sPlayer.Play();
                     storyImageBox.Image = Properties.Resources.football_field;
@@ -111,7 +112,8 @@ namespace Football
                     outputLabel.Text = "Your Qb threw an interception, play again?";
                     option2Output.Text = "Yes";
                     option3Output.Text = "No";
-                   sPlayer = new SoundPlayer(Properties.Resources.lostSound);
+                    option4Output.Text = "";
+                    sPlayer = new SoundPlayer(Properties.Resources.lostSound);
                     sPlayer.Play();
                     storyImageBox.Image = Properties.Resources.qbInterseption;
                     break;
@@ -119,6 +121,7 @@ namespace Football
                     outputLabel.Text = "You got a touchdown, you win, play again?";
                     option2Output.Text = "Yes";
                     option3Output.Text = "No";
+                    option4Output.Text = "";
                     sPlayer = new SoundPlayer(Properties.Resources.winningSound);
                     sPlayer.Play();
                     storyImageBox.Image = Properties.Resources.touchdownScore;
@@ -127,7 +130,8 @@ namespace Football
                     outputLabel.Text = "Your running back fumbled, play again?";
                    option2Output.Text = "Yes";
                   option3Output.Text = "No";
-                   sPlayer = new SoundPlayer(Properties.Resources.lostSound);
+                    option4Output.Text = "";
+                    sPlayer = new SoundPlayer(Properties.Resources.lostSound);
                   sPlayer.Play();
                     storyImageBox.Image = Properties.Resources.rbFumble;
                     break;
@@ -145,10 +149,11 @@ namespace Football
                 case 7:
                     outputLabel.Text = "You are going for a rushing play, would you like to go for an imside or outside rush?";
                     option2Output.Text = "Inside run";
-                    option4Output.Text = "outside run";
+                    option3Output.Text = "outside run";
+                    option4Output.Text = "";
                     break;
                 case 8:
-                    outputLabel.Text = "You are going for a deep pass play, would you like to thrwo to Wr1, Wr2, Wr3?";
+                    outputLabel.Text = "You are going for a deep pass play, would you like to throw to Wr1, Wr2, Wr3?";
                     option2Output.Text = "Wr1";
                    option3Output.Text = "Wr2";
                     option4Output.Text = "Wr3";
@@ -207,7 +212,10 @@ namespace Football
             {
                 page = 7;
             }
-
+            else if (page == 7)
+            {
+                page = 15;
+            }
             else if (page == 6)
             {
                 page = 9;
